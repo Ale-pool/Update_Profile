@@ -539,7 +539,7 @@ body {
    =================================== */
 .about-section {
     min-height: 100vh;
-    padding: 120px 0;
+    padding: 90px 0;
     background: var(--color-black);
     position: relative;
     overflow: hidden;
@@ -559,9 +559,9 @@ body {
 
 .about-grid {
     display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 8rem;
-    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: start;
 }
 
 /* About Image Side */
@@ -575,7 +575,7 @@ body {
 .about-image-container {
     position: relative;
     width: 100%;
-    max-width: 450px;
+    max-width: 520px;
 }
 
 .about-image-frame {
@@ -653,6 +653,7 @@ body {
 
 .about-content {
     position: relative;
+    max-width: 720px;
 }
 
 .section-label {
@@ -663,9 +664,11 @@ body {
 }
 
 .label-line {
-    width: 40px;
+    width: 36px;
     height: 2px;
-    background: var(--color-orange);
+    background: linear-gradient(90deg, var(--color-orange) 0%, rgba(255, 87, 51, 0.3) 100%);
+    border-radius: 2px;
+    box-shadow: 0 0 12px rgba(255, 87, 51, 0.15);
 }
 
 .label-text {
@@ -677,11 +680,11 @@ body {
 }
 
 .about-title {
-    font-size: 4rem;
+    font-size: 2.8rem;
     font-weight: 800;
     line-height: 1.1;
-    margin-bottom: 1rem;
-    letter-spacing: -1px;
+    margin-bottom: 0.75rem;
+    letter-spacing: -0.5px;
 }
 
 .about-title .highlight {
@@ -692,19 +695,25 @@ body {
 }
 
 .about-subtitle {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--color-text-gray);
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
     font-style: italic;
+}
+
+/* Optional accent style for subtitle */
+.about-subtitle.accent {
+    color: var(--color-orange);
 }
 
 .about-text {
     color: rgba(255, 255, 255, 0.85);
-    font-size: 1.05rem;
-    line-height: 1.9;
+    font-size: 1.125rem;
+    line-height: 1.8;
     margin-bottom: 3rem;
     font-weight: 300;
+    max-width: 68ch;
 }
 
 .about-text p {
@@ -750,7 +759,7 @@ body {
 }
 
 .stat-number {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     background: linear-gradient(135deg, var(--color-orange) 0%, #ff8c5a 100%);
     -webkit-background-clip: text;
@@ -761,7 +770,7 @@ body {
 }
 
 .stat-label {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--color-text-gray);
     font-weight: 500;
     letter-spacing: 0.5px;
@@ -800,6 +809,19 @@ body {
 /* ===================================
    RESPONSIVE DESIGN
    =================================== */
+@media (min-width: 1400px) {
+    .about-text {
+        font-size: 1.25rem;
+        line-height: 1.75;
+    }
+    .about-content {
+        max-width: 800px;
+    }
+    .about-image-container {
+        max-width: 560px;
+    }
+}
+
 @media (max-width: 1200px) {
     .home-grid {
         gap: 4rem;
