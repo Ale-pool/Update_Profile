@@ -807,6 +807,520 @@ body {
 }
 
 /* ===================================
+   SERVICES SECTION
+   =================================== */
+.services-section {
+    min-height: 100vh;
+    padding: 100px 0;
+    background: var(--color-black);
+    position: relative;
+}
+
+.services-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 4rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    letter-spacing: -1px;
+}
+
+.section-title .highlight {
+    background: linear-gradient(135deg, var(--color-orange) 0%, #ff8c5a 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: var(--color-text-gray);
+    line-height: 1.7;
+    font-weight: 300;
+}
+
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+.service-card {
+    background: var(--color-dark-gray);
+    border-radius: 24px;
+    padding: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-orange), transparent);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(255, 87, 51, 0.2);
+    box-shadow: 0 20px 60px rgba(255, 87, 51, 0.15);
+}
+
+.service-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 87, 51, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-orange);
+    transition: var(--transition-smooth);
+}
+
+.service-card:hover .service-icon {
+    background: var(--color-orange);
+    color: var(--color-white);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.service-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: var(--color-white);
+}
+
+.service-description {
+    font-size: 1rem;
+    color: var(--color-text-gray);
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    font-weight: 300;
+}
+
+.service-features {
+    list-style: none;
+    padding: 0;
+}
+
+.service-features li {
+    font-size: 0.9rem;
+    color: var(--color-text-gray);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.service-features li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--color-orange);
+    font-weight: 600;
+}
+
+/* Technology Carousel */
+.tech-carousel-container {
+    margin-top: 6rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.tech-carousel-title {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    color: var(--color-white);
+}
+
+.tech-carousel {
+    overflow: hidden;
+    position: relative;
+    padding: 2rem 0;
+    mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent,
+        black 10%,
+        black 90%,
+        transparent
+    );
+}
+
+.tech-track {
+    display: flex;
+    gap: 3rem;
+    animation: scroll 30s linear infinite;
+    width: fit-content;
+}
+
+.tech-track:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.tech-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    min-width: 120px;
+    padding: 1.5rem;
+    background: var(--color-dark-gray);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+}
+
+.tech-item:hover {
+    transform: translateY(-5px);
+    border-color: rgba(255, 87, 51, 0.3);
+    box-shadow: 0 10px 30px rgba(255, 87, 51, 0.2);
+}
+
+.tech-item img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    transition: var(--transition-smooth);
+}
+
+.tech-item:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+.tech-item span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text-gray);
+    transition: var(--transition-smooth);
+}
+
+.tech-item:hover span {
+    color: var(--color-white);
+}
+
+/* ===================================
+   CURRICULUM SECTION
+   =================================== */
+.curriculum-section {
+    min-height: 100vh;
+    padding: 100px 0;
+    background: var(--color-black);
+    position: relative;
+}
+
+.curriculum-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+}
+
+/* CV Download Button */
+.cv-download-container {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.cv-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: linear-gradient(135deg, var(--color-orange) 0%, #ff6b47 100%);
+    color: var(--color-white);
+    padding: 1.1rem 2.5rem;
+    border-radius: 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition-smooth);
+    box-shadow: 0 10px 30px rgba(255, 87, 51, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.cv-download-btn:hover {
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(255, 87, 51, 0.5);
+}
+
+.cv-download-btn svg {
+    transition: var(--transition-smooth);
+}
+
+.cv-download-btn:hover svg {
+    animation: downloadBounce 0.6s ease-in-out;
+}
+
+@keyframes downloadBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(4px); }
+}
+
+/* Curriculum Content */
+.curriculum-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.cv-section {
+    margin-bottom: 5rem;
+}
+
+.cv-section:last-child {
+    margin-bottom: 0;
+}
+
+.cv-section-header {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.cv-icon {
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 87, 51, 0.1);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-orange);
+    flex-shrink: 0;
+}
+
+.cv-section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--color-orange);
+    letter-spacing: 0.5px;
+}
+
+/* Timeline Styles */
+.timeline {
+    position: relative;
+    padding-left: 3rem;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 10px;
+    bottom: 10px;
+    width: 2px;
+    background: linear-gradient(180deg, 
+        var(--color-orange) 0%, 
+        rgba(255, 87, 51, 0.3) 50%, 
+        var(--color-orange) 100%
+    );
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -2.45rem;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    background: var(--color-orange);
+    border-radius: 50%;
+    border: 3px solid var(--color-black);
+    box-shadow: 0 0 0 3px rgba(255, 87, 51, 0.3);
+    z-index: 2;
+    transition: var(--transition-smooth);
+}
+
+.timeline-item:hover .timeline-dot {
+    transform: scale(1.3);
+    box-shadow: 0 0 0 6px rgba(255, 87, 51, 0.4);
+}
+
+.timeline-content {
+    position: relative;
+}
+
+.timeline-card {
+    background: var(--color-dark-gray);
+    border-radius: 20px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--color-orange);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-item:hover .timeline-card::before {
+    transform: scaleY(1);
+}
+
+.timeline-item:hover .timeline-card {
+    border-color: rgba(255, 87, 51, 0.2);
+    box-shadow: 0 10px 40px rgba(255, 87, 51, 0.15);
+    transform: translateX(5px);
+}
+
+.timeline-header {
+    margin-bottom: 1.5rem;
+}
+
+.timeline-position {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.timeline-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-date,
+.timeline-location {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--color-text-gray);
+}
+
+.timeline-date svg,
+.timeline-location svg {
+    color: var(--color-orange);
+    flex-shrink: 0;
+}
+
+.timeline-description {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.timeline-tasks {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-tasks li {
+    font-size: 0.95rem;
+    color: var(--color-text-gray);
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.6;
+}
+
+.timeline-tasks li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--color-orange);
+    font-weight: 600;
+}
+
+/* Courses List */
+.courses-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.courses-list li {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 1rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+    line-height: 1.7;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.courses-list li:last-child {
+    border-bottom: none;
+}
+
+.courses-list li::before {
+    content: '●';
+    position: absolute;
+    left: 0;
+    color: var(--color-orange);
+    font-weight: 600;
+    top: 1rem;
+}
+
+.courses-list li strong {
+    color: var(--color-white);
+    font-weight: 600;
+}
+
+/* ===================================
    RESPONSIVE DESIGN
    =================================== */
 @media (min-width: 1400px) {
@@ -883,6 +1397,33 @@ body {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
         padding: 2rem;
+    }
+
+    /* Services Section Responsive */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2.5rem;
+    }
+
+    /* Curriculum Section Responsive */
+    .curriculum-section {
+        padding: 80px 0;
+    }
+
+    .cv-section-header {
+        gap: 1rem;
+    }
+
+    .cv-section-title {
+        font-size: 1.7rem;
+    }
+
+    .timeline-position {
+        font-size: 1.2rem;
     }
 }
 
@@ -965,6 +1506,88 @@ body {
     
     .stat-item:last-child {
         border-bottom: none;
+    }
+
+    /* Services Section Responsive */
+    .services-section {
+        padding: 80px 0;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .tech-carousel-title {
+        font-size: 1.5rem;
+    }
+
+    .tech-item {
+        min-width: 100px;
+        padding: 1.2rem;
+    }
+
+    .tech-item img {
+        width: 40px;
+        height: 40px;
+    }
+
+    /* Curriculum Section Responsive */
+    .curriculum-section {
+        padding: 80px 0;
+    }
+
+    .cv-section {
+        margin-bottom: 4rem;
+    }
+
+    .cv-section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .cv-section-title {
+        font-size: 1.5rem;
+    }
+
+    .timeline {
+        padding-left: 2.5rem;
+    }
+
+    .timeline::before {
+        left: 12px;
+    }
+
+    .timeline-dot {
+        left: -2.25rem;
+        width: 12px;
+        height: 12px;
+    }
+
+    .timeline-card {
+        padding: 1.5rem;
+    }
+
+    .timeline-position {
+        font-size: 1.15rem;
+    }
+
+    .timeline-meta {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .courses-list li {
+        font-size: 0.95rem;
     }
 }
 
@@ -1086,5 +1709,128 @@ body {
     .decoration-circle-1,
     .decoration-circle-2 {
         display: none;
+    }
+
+    /* Services Section Responsive */
+    .services-section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.75rem;
+    }
+
+    .section-description {
+        font-size: 0.95rem;
+    }
+
+    .service-card {
+        padding: 2rem;
+    }
+
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    .tech-carousel-container {
+        margin-top: 4rem;
+    }
+
+    .tech-carousel-title {
+        font-size: 1.3rem;
+    }
+
+    .tech-track {
+        gap: 2rem;
+    }
+
+    .tech-item {
+        min-width: 90px;
+        padding: 1rem;
+    }
+
+    .tech-item img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .tech-item span {
+        font-size: 0.8rem;
+    }
+
+    /* Curriculum Section Responsive */
+    .curriculum-section {
+        padding: 60px 0;
+    }
+
+    .curriculum-header {
+        margin-bottom: 2rem;
+    }
+
+    .cv-download-container {
+        margin-bottom: 3rem;
+    }
+
+    .cv-download-btn {
+        padding: 1rem 2rem;
+        font-size: 0.95rem;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cv-section {
+        margin-bottom: 3rem;
+    }
+
+    .cv-icon {
+        width: 50px;
+        height: 50px;
+    }
+
+    .cv-icon svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .cv-section-title {
+        font-size: 1.3rem;
+    }
+
+    .timeline {
+        padding-left: 2rem;
+    }
+
+    .timeline::before {
+        left: 8px;
+    }
+
+    .timeline-dot {
+        left: -1.7rem;
+        width: 10px;
+        height: 10px;
+        border-width: 2px;
+    }
+
+    .timeline-card {
+        padding: 1.25rem;
+    }
+
+    .timeline-position {
+        font-size: 1.1rem;
+    }
+
+    .timeline-description {
+        font-size: 0.95rem;
+        text-align: left;
+    }
+
+    .timeline-tasks li,
+    .courses-list li {
+        font-size: 0.9rem;
+        padding-left: 1.2rem;
+    }
+
+    .section-label {
+        justify-content: center;
     }
 }
