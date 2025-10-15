@@ -320,7 +320,15 @@ class StatusIndicator {
     constructor() {
         this.statusDot = document.querySelector('.status-dot');
         this.statusText = document.querySelector('.status-text');
-        this.isAvailable = false; // Change this to update status
+        this.isAvailable = true;
+        
+        // Initialize with the current status
+        this.init();
+    }
+    
+    init() {
+        // Apply the initial status when the page loads
+        this.updateStatus(this.isAvailable);
     }
     
     // Method to manually update status
@@ -328,12 +336,28 @@ class StatusIndicator {
         this.isAvailable = isAvailable;
         
         if (isAvailable) {
-            this.statusDot.style.background = '#3300ffff';
+            this.statusDot.style.background = '#00FF88';
+            this.statusDot.style.boxShadow = '0 0 20px rgba(0, 255, 136, 0.6)';
             this.statusText.textContent = customText || 'Disponible para trabajar';
         } else {
             this.statusDot.style.background = '#FF5733';
+            this.statusDot.style.boxShadow = '0 0 20px rgba(255, 87, 51, 0.6)';
             this.statusText.textContent = customText || 'No disponible';
         }
+    }
+    
+    // Toggle between available and unavailable
+    toggle() {
+        this.updateStatus(!this.isAvailable);
+    }
+    
+    // Quick methods for easy access
+    setAvailable(customText = null) {
+        this.updateStatus(true, customText);
+    }
+    
+    setUnavailable(customText = null) {
+        this.updateStatus(false, customText);
     }
 }
 
@@ -365,7 +389,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // Make statusIndicator globally accessible for manual updates
     window.statusIndicator = statusIndicator;
     
+    /* ====================================================================
+       CÓMO CAMBIAR EL ESTADO DE DISPONIBILIDAD:
+       ====================================================================
+       
+       OPCIÓN 1: Cambiar el estado inicial en el constructor (línea 326)
+       this.isAvailable = true;  // Disponible (verde)
+       this.isAvailable = false; // No disponible (naranja)
+       
+       OPCIÓN 2: Usar la consola del navegador (F12):
+       window.statusIndicator.setAvailable();        // Cambiar a disponible
+       window.statusIndicator.setUnavailable();      // Cambiar a no disponible
+       window.statusIndicator.toggle();              // Alternar estado
+       
+       OPCIÓN 3: Con texto personalizado:
+       window.statusIndicator.setAvailable("Disponible ahora");
+       window.statusIndicator.setUnavailable("Ocupado hasta Enero 2026");
+       
+       ==================================================================== */
+    
     console.log('Portfolio initialized successfully!');
+    console.log('💡 Para cambiar el estado de disponibilidad, usa: window.statusIndicator.setAvailable() o .setUnavailable()');
 });
 
 // ===================================
