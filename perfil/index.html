@@ -17,19 +17,19 @@
                 <img src="img/logo.png" alt="Alexander Logo">
             </div>
             <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#acerca" class="nav-link">Acerca</a></li>
-                <li><a href="#servicios" class="nav-link">Servicios</a></li>
-                <li><a href="#curriculum" class="nav-link">Curriculum</a></li>
-                <li><a href="#portafolio" class="nav-link">Portafolio</a></li>
+                <li><a href="#home" class="nav-link active" data-i18n="nav-home">Home</a></li>
+                <li><a href="#acerca" class="nav-link" data-i18n="nav-about">Acerca</a></li>
+                <li><a href="#servicios" class="nav-link" data-i18n="nav-services">Servicios</a></li>
+                <li><a href="#curriculum" class="nav-link" data-i18n="nav-curriculum">Curriculum</a></li>
+                <li><a href="#portafolio" class="nav-link" data-i18n="nav-portfolio">Portafolio</a></li>
             </ul>
             <!-- Language Toggle - Minimalista -->
             <div class="language-toggle">
-                <button class="lang-toggle-btn active" data-lang="en" aria-label="English">
+                <button class="lang-toggle-btn" data-lang="en" aria-label="English">
                     EN
                 </button>
                 <span class="lang-separator">/</span>
-                <button class="lang-toggle-btn" data-lang="es" aria-label="Español">
+                <button class="lang-toggle-btn active" data-lang="es" aria-label="Español">
                     ES
                 </button>
             </div>
@@ -43,8 +43,8 @@
                 <div class="home-left">
                     <div class="status-card">
                         <div class="status-indicator">
-                            <span class="status-dot"></span>
-                            <span class="status-text">Disponible para trabajar</span>
+                            <span class="status-dot"></span> <!-- Tener en cuenta esta parte que a cambiar la etiqueta de data-i18n  segun sea el caso del estado-->
+                            <span class="status-text" data-i18n="status-available">Disponible para trabajar</span>
                         </div>
                     </div>
                     
@@ -61,16 +61,16 @@
                             </div>
                             <div class="profile-info">
                                 <h1 class="profile-name">Alexander<br>Villada</h1>
-                                <p class="profile-title">Ingeniero Informático</p>
+                                <p class="profile-title" data-i18n="profile-title">Ingeniero Informático</p>
                             </div>
                         </div>
-                        <button class="cta-button">
+                        <button class="cta-button" data-i18n="cta-button">
                             Ver Trabajos
                             <span class="arrow">→</span>
                         </button>
                     </div>
 
-                    <!-- Projects Carousel -->
+                    <!-- Projects Carousel  parte de la seccion home, en relación al carrusel infinito--> 
                     <div class="projects-carousel">
                         <div class="carousel-container">
                             <div class="carousel-track">
@@ -139,13 +139,13 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
                             </svg>
-                            Contactame
+                            <p class="contact-btn-text" data-i18n="contact-button-text">Contactame</p>
                         </a>
                         <a href="mailto:avilladaberrio@gmail.com" class="contact-btn email">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                             </svg>
-                            Correo
+                            <p class="contact-btn-text" data-i18n="email-button-text">Correo</p>
                         </a>
                     </div>
                 </div>
@@ -157,7 +157,7 @@
     <section id="acerca" class="about-section">
         <div class="container">
             <div class="about-grid">
-                <!-- Left Side - Professional Image -->
+                <!-- movimiento de la imagen a la izquierda -->
                 <div class="about-left">
                     <div class="about-image-container">
                         <div class="about-image-frame">
@@ -175,24 +175,24 @@
                     <div class="about-content">
                         <div class="section-label">
                             <span class="label-line"></span>
-                            <span class="label-text">Conóceme</span>
+                            <span class="label-text" data-i18n="about-label">Conóceme</span>
                         </div>
                         
                         <h2 class="about-title">
-                            ACERCA <span class="highlight">DE MÍ</span>
+                            <p data-i18n="about-title"> ACERCA <span class="highlight">de mi</span></p>  
                         </h2>
                         
-                        <h3 class="about-subtitle">Ingeniero Informático</h3>
+                        <h3 class="about-subtitle" data-i18n="about-subtitle">Ingeniero Informático</h3>
                         
                         <div class="about-text">
-                            <p>
+                            <p data-i18n="about-text-1">
                                 Soy un profesional en Ingeniería Informática con una gran pasión por la tecnología, el análisis de datos y 
                                 el desarrollo de soluciones digitales que generen impacto real. A lo largo de mi formación y experiencia, 
                                 he desarrollado competencias sólidas en programación, análisis de información, desarrollo web y manejo 
                                 de herramientas en la nube, siempre con una mentalidad analítica, curiosa y orientada a la mejora continua.
                             </p>
                             
-                            <p>
+                            <p data-i18n="about-text-2">
                                 Trabajo tanto habilidades técnicas como estratégicas: Conosco lenguajes de programación como 
                                 <strong>Python y JavaScript</strong>, y frameworks como <strong>React</strong> para el desarrollo frontend. Además, tengo experiencia 
                                 trabajando con bases de datos <strong>SQL y NoSQL</strong>, lo que me permite diseñar, optimizar y mantener estructuras 
@@ -201,7 +201,7 @@
                                 técnicas de clustering aplicadas a contextos reales, como la gestión de riesgos fiduciarios.
                             </p>
                             
-                            <p>
+                            <p data-i18n="about-text-3">
                                 Me considero una persona analítica, autodidacta y comprometido, con una fuerte inclinación por 
                                 aprender constantemente y explorar nuevas tecnologías. Disfruto trabajar en entornos colaborativos 
                                 donde se combinan la innovación, la investigación y la ingeniería para resolver problemas reales.
@@ -212,15 +212,15 @@
                         <div class="about-stats">
                             <div class="stat-item">
                                 <div class="stat-number">1+</div>
-                                <div class="stat-label">Años de Experiencia</div>
+                                <div class="stat-label" data-i18n="stat-1-label">Años de Experiencia</div>
                             </div>
                             <div class="stat-item">
                                 <div class="stat-number">20+</div>
-                                <div class="stat-label">Proyectos Completados</div>
+                                <div class="stat-label" data-i18n="stat-2-label">Proyectos Completados</div>
                             </div>
                             <div class="stat-item">
                                 <div class="stat-number">15+</div>
-                                <div class="stat-label">Tecnologías Dominadas</div>
+                                <div class="stat-label" data-i18n="stat-3-label">Tecnologías Dominadas</div>
                             </div>
                         </div>
                     </div>
@@ -236,12 +236,12 @@
             <div class="services-header">
                 <div class="section-label">
                     <span class="label-line"></span>
-                    <span class="label-text">Lo que ofrezco</span>
+                    <span class="label-text" data-i18n="services-label">Lo que ofrezco</span>
                 </div>
                 <h2 class="section-title">
-                    NUESTROS <span class="highlight">SERVICIOS</span>
+                    <span class="highlight" data-i18n="services-title-highlight"> NUESTROS SERVICIOS</span>
                 </h2>
-                <p class="section-description">
+                <p class="section-description" data-i18n="services-description">
                     Soluciones tecnológicas innovadoras diseñadas para contribuir al desarrollo tecnologico
                 </p>
             </div>
@@ -253,8 +253,8 @@
                     <div class="service-icon">
                         <img src="img/analitica.png" alt="analitica">
                     </div>
-                    <h3 class="service-title">Analítica de datos</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-i18n="service-1-title">Analítica de datos</h3>
+                    <p class="service-description" data-i18n="service-1-desc">
                         Transformo datos en información valiosa para impulsar decisiones
                         estratégicas y mejorar el rendimiento de los procesos organizacionales.
                         Desde la recolección y limpieza de datos hasta la creación de 
@@ -274,8 +274,8 @@
                     <div class="service-icon">
                         <img src="img/desarrollo.png" alt="desarrollo web">
                     </div>
-                    <h3 class="service-title">Desarrollo web</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-i18n="service-2-title">Desarrollo web</h3>
+                    <p class="service-description" data-i18n="service-2-desc">
                         Diseño y desarrollo de aplicaciones web modernas, interactivas y
                         escalables, utilizando tecnologías como React, HTML, CSS y
                         Javascript. Me enfoco en la experiencia del usuario, el rendimiento y 
@@ -295,8 +295,8 @@
                     <div class="service-icon">
                         <img src="img/nube.png" alt="soluciones en la nube">
                     </div>
-                    <h3 class="service-title">Soluciones en la Nube</h3>
-                    <p class="service-description">
+                    <h3 class="service-title" data-i18n="service-3-title">Soluciones en la Nube</h3>
+                    <p class="service-description" data-i18n="service-3-desc">
                            Implemento arquitecturas seguras y eficientes en la nube, integrando
                             servicios de AWS y Azure para el procesamiento, almacenamiento
                             y despliegue de aplicaciones o flujos de datos automatizados
@@ -314,7 +314,7 @@
 
             <!-- Technology Carousel -->
             <div class="tech-carousel-container">
-                <h3 class="tech-carousel-title">Tecnologías que Domino</h3>
+                <h3 class="tech-carousel-title" data-i18n="tech-title">Tecnologías que Domino</h3>
                 <div class="tech-carousel">
                     <div class="tech-track">
                         <!-- First set of technologies -->
@@ -412,12 +412,12 @@
             <div class="curriculum-header">
                 <div class="section-label">
                     <span class="label-line"></span>
-                    <span class="label-text">Mi Trayectoria</span>
+                    <span class="label-text" data-i18n="cv-label">Mi Trayectoria</span>
                 </div>
                 <h2 class="section-title">
                     CURRÍ<span class="highlight">CULUM</span>
                 </h2>
-                <p class="section-description">
+                <p class="section-description" data-i18n="cv-phrase">
                     Un recorrido por mi formación académica, experiencia profesional y certificaciones
                 </p>
             </div>
@@ -430,7 +430,7 @@
                         <polyline points="7 10 12 15 17 10"></polyline>
                         <line x1="12" y1="15" x2="12" y2="3"></line>
                     </svg>
-                    Descargar CV
+                    <p data-i18n="cv-download">Descargar CV</p>
                 </a>
             </div>
 
@@ -446,7 +446,7 @@
                                 <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
                             </svg>
                         </div>
-                        <h3 class="cv-section-title">Experiencia :</h3>
+                        <h3 class="cv-section-title" data-i18n="cv-experience">Experiencia :</h3>
                     </div>
 
                     <div class="timeline">
@@ -456,7 +456,7 @@
                             <div class="timeline-content">
                                 <div class="timeline-card">
                                     <div class="timeline-header">
-                                        <h4 class="timeline-position">Bancolombia - Analista de Datos (Prácticas Profesionales)</h4>
+                                        <h4 class="timeline-position" data-i18n="exp-1-title">Bancolombia - Analista de Datos (Prácticas Profesionales)</h4>
                                         <div class="timeline-meta">
                                             <div class="timeline-date">
                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -465,7 +465,7 @@
                                                     <line x1="8" y1="2" x2="8" y2="6"></line>
                                                     <line x1="3" y1="10" x2="21" y2="10"></line>
                                                 </svg>
-                                                <span>Enero 2024 - Julio 23</span>
+                                                <span data-i18n="exp-1-period">Enero 2025 - Julio 2025</span>
                                             </div>
                                             <div class="timeline-location">
                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -476,16 +476,16 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="timeline-description">
+                                    <p class="timeline-description" data-i18n="exp-1-desc">
                                         Desarrollé un modelo de detección de riesgos fiduciarios aplicando técnicas de machine learning como Isolation 
                                         Forest, análisis de redes y clustering. A partir de los datos de órdenes de pago, identifiqué patrones anómalos y generé 
                                         visualizaciones interactivas en Power BI, facilitando la toma de decisiones del área de fiduciaria.
                                     </p>
                                     <ul class="timeline-tasks">
-                                        <li>Limpieza, análisis y modelado de datos con Python (pandas, scikit-learn).</li>
-                                        <li>Construcción de dashboards dinámicos con Power BI.</li>
-                                        <li>Optimización técnica de los procesos analíticos.</li>
-                                        <li>Implementación de procesos ETL y flujos de datos con AWS Glue y DynamoDB.</li>
+                                        <li data-i18n="exp-1-li-2">Limpieza, análisis y modelado de datos con Python (pandas, scikit-learn).</li>
+                                        <li data-i18n="exp-1-li-3">Construcción de dashboards dinámicos con Power BI.</li>
+                                        <li data-i18n="exp-1-li-4">Optimización técnica de los procesos analíticos.</li>
+                                        <li data-i18n="exp-1-li-5">Implementación de procesos ETL y flujos de datos con AWS Glue y DynamoDB.</li>
                                     </ul>
                                 </div>
                             </div>
@@ -497,7 +497,7 @@
                             <div class="timeline-content">
                                 <div class="timeline-card">
                                     <div class="timeline-header">
-                                        <h4 class="timeline-position">Code Journey - Desarrollador Frontend (Proyecto Académico)</h4>
+                                        <h4 class="timeline-position" data-i18n="exp-2-title">Code Journey - Desarrollador Frontend (Proyecto Académico)</h4>
                                         <div class="timeline-meta">
                                             <div class="timeline-date">
                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -506,7 +506,7 @@
                                                     <line x1="8" y1="2" x2="8" y2="6"></line>
                                                     <line x1="3" y1="10" x2="21" y2="10"></line>
                                                 </svg>
-                                                <span>2023 - 2024</span>
+                                                <span data-i18n="exp-2-period">2023 - 2024</span>
                                             </div>
                                             <div class="timeline-location">
                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -517,14 +517,14 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="timeline-description">
+                                    <p class="timeline-description" data-i18n="exp-2-desc">
                                         Desarrollo de una aplicación móvil interactiva para el aprendizaje de programación, utilizando React Native, 
                                         enfocada en mejorar la experiencia de usuario mediante ejercicios prácticos y seguimiento personalizado.
                                     </p>
                                     <ul class="timeline-tasks">
-                                        <li>Implementación de interfaz con react native y TailwindCSS.</li>
-                                        <li>Integración con API para gestión de datos de usuario.</li>
-                                        <li>Coordinación del equipo de desarrollo (4 personas).</li>
+                                        <li data-i18n="exp-cod-1">Implementación de interfaz con react native y TailwindCSS.</li>
+                                        <li data-i18n="exp-cod-2">Integración con API para gestión de datos de usuario.</li>
+                                        <li data-i18n="exp-cod-3">Coordinación del equipo de desarrollo (4 personas).</li>
                                     </ul>
                                 </div>
                             </div>
@@ -541,7 +541,7 @@
                                 <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                             </svg>
                         </div>
-                        <h3 class="cv-section-title">Educación :</h3>
+                        <h3 class="cv-section-title" data-i18n="cv-education">Educación :</h3>
                     </div>
 
                     <div class="timeline">
@@ -551,7 +551,7 @@
                             <div class="timeline-content">
                                 <div class="timeline-card">
                                     <div class="timeline-header">
-                                        <h4 class="timeline-position">Ingeniería Informática</h4>
+                                        <h4 class="timeline-position" data-i18n="edu-1-title">Ingeniería Informática</h4>
                                         <div class="timeline-meta">
                                             <div class="timeline-date">
                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -560,7 +560,7 @@
                                                     <line x1="8" y1="2" x2="8" y2="6"></line>
                                                     <line x1="3" y1="10" x2="21" y2="10"></line>
                                                 </svg>
-                                                <span>2020 - 2025</span>
+                                                <span data-i18n="edu-1-period">2020 - 2025</span>
                                             </div>
                                             <div class="timeline-location">
                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -571,7 +571,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="timeline-description">
+                                    <p class="timeline-description" data-i18n="edu-description">
                                         Formación profesional en desarrollo de software, bases de datos, análisis de datos e infraestructura en la nube. 
                                         Enfoque en el diseño de soluciones tecnológicas que integran backend en Python, frontend en React, y servicios 
                                         AWS/Azure.
@@ -586,7 +586,7 @@
                             <div class="timeline-content">
                                 <div class="timeline-card">
                                     <div class="timeline-header">
-                                        <h4 class="timeline-position">Bachiller Académico</h4>
+                                        <h4 class="timeline-position" data-i18n="edu-2-title">Bachiller Académico</h4>
                                         <div class="timeline-meta">
                                             <div class="timeline-date">
                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -595,7 +595,7 @@
                                                     <line x1="8" y1="2" x2="8" y2="6"></line>
                                                     <line x1="3" y1="10" x2="21" y2="10"></line>
                                                 </svg>
-                                                <span>2008 - 2019</span>
+                                                <span data-i18n="edu-2-period">2008 - 2019</span>
                                             </div>
                                             <div class="timeline-location">
                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -606,7 +606,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <p class="timeline-description">
+                                    <p class="timeline-description" data-i18n="edu-shool-description">
                                         Desarrollo de habilidades en pensamiento lógico, matemático y resolución de problemas, base para mi 
                                         enfoque analítico y tecnológico actual.
                                     </p>
@@ -625,7 +625,7 @@
                                 <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
                             </svg>
                         </div>
-                        <h3 class="cv-section-title">Cursos :</h3>
+                        <h3 class="cv-section-title" data-i18n="cv-courses">Cursos :</h3>
                     </div>
 
                     <div class="timeline">
@@ -634,12 +634,12 @@
                             <div class="timeline-content">
                                 <div class="timeline-card">
                                     <ul class="courses-list">
-                                        <li><strong>Power BI Total – Udemy (2024):</strong> Creación de dashboards, medidas DAX, conexión a fuentes externas y storytelling con datos.</li>
-                                        <li><strong>Fundamentos de Inteligencia Artificial – IBM (2023):</strong> Introducción a IA, machine learning y automatización inteligente.</li>
-                                        <li><strong>Python para Ciencia de Datos – Coursera (2023):</strong> Análisis estadístico, visualización de datos y manejo de librerías como pandas y matplotlib.</li>
-                                        <li><strong>AWS Cloud Practitioner Essentials – Amazon Web Services (2024):</strong> Fundamentos de la nube, servicios básicos, arquitectura y seguridad.</li>
-                                        <li><strong>Git y Control de Versiones – Platzi (2022):</strong> Flujo de trabajo colaborativo con GitHub y gestión de versiones en proyectos de desarrollo.</li>
-                                        <li><strong>Curso Maestro de Python:</strong> Aprender python en relación a diferentes módulos, Tkinter, SQlite, Numpy, Pandas, Matplotlib, Pipenv, Django, FastApi, Bs4 y más.</li>
+                                        <li ><strong>Power BI Total – Udemy (2024):</strong> <p data-i18n="course-description-1">Creación de dashboards, medidas DAX, conexión a fuentes externas y storytelling con datos.</p></li>
+                                        <li><strong>Fundamentos de Inteligencia Artificial – IBM (2023):</strong> <p data-i18n="course-description-2">Introducción a IA, machine learning y automatización inteligente.</p></li>
+                                        <li><strong>Python para Ciencia de Datos – Coursera (2023):</strong> <p data-i18n="course-description-3">Análisis estadístico, visualización de datos y manejo de librerías como pandas y matplotlib. </p></li>
+                                        <li><strong>AWS Cloud Practitioner Essentials – Amazon Web Services (2024):</strong> <p data-i18n="course-description-4">Fundamentos de la nube, servicios básicos, arquitectura y seguridad.</p></li>
+                                        <li><strong>Git y Control de Versiones – Platzi (2022):</strong> <p data-i18n="course-description-5">Flujo de trabajo colaborativo con GitHub y gestión de versiones en proyectos de desarrollo.</p></li>
+                                        <li><strong>Curso Maestro de Python:</strong> <p data-i18n="course-description-6">Aprender python en relación a diferentes módulos, Tkinter, SQlite, Numpy, Pandas, Matplotlib, Pipenv, Django, FastApi, Bs4 y más.</p></li>
                                     </ul>
                                 </div>
                             </div>
@@ -658,12 +658,12 @@
             <div class="portfolio-header">
                 <div class="section-label">
                     <span class="label-line"></span>
-                    <span class="label-text">Mi Trabajo</span>
+                    <span class="label-text" data-i18n="portfolio-label">Mi Trabajo</span>
                 </div>
                 <h2 class="section-title">
-                    PROYEC<span class="highlight">TOS</span>
+                    <p data-i18n="portfolio-title" class="highlight">Mis proyectos</p>
                 </h2>
-                <p class="section-description">
+                <p class="section-description" data-i18n="portfolio-subtitle">
                     Una selección de proyectos que demuestran mi experiencia en desarrollo, análisis de datos y soluciones tecnológicas
                 </p>
             </div>
@@ -673,67 +673,79 @@
                 <!-- Project Card 1 -->
                 <div class="project-card" data-project="1">
                     <div class="project-image-wrapper">
-                        <img src="img/proyecto-predictivo.jpg" alt="Modelo Predictivo" class="project-img">
+                        <img src="img/model_predictive.jpg" alt="Modelo Predictivo" class="project-img">
                         <div class="project-overlay">
                             <h3 class="project-title">Modelo predictivo</h3>
                         </div>
                     </div>
-                    <button class="project-btn">Ver Más</button>
+                    <a href="#">
+                    <button class="project-btn" data-i18n="project-btn">Ver Más</button>
+                    </a>
                 </div>
 
                 <!-- Project Card 2 -->
                 <div class="project-card" data-project="2">
                     <div class="project-image-wrapper">
-                        <img src="img/proyecto-code-journey.jpg" alt="Code Journey" class="project-img">
+                        <img src="img/code_journey.png" alt="Code Journey" class="project-img">
                         <div class="project-overlay">
                             <h3 class="project-title">Code Journey</h3>
                         </div>
                     </div>
-                    <button class="project-btn">Ver Más</button>
+                    <a href="https://codejourney.netlify.app/" target="_blank">
+                         <button class="project-btn"  data-i18n="project-btn">Ver Más</button>
+                    </a>
                 </div>
 
                 <!-- Project Card 3 -->
                 <div class="project-card" data-project="3">
                     <div class="project-image-wrapper">
-                        <img src="img/proyecto-consolacion.jpg" alt="Consolación" class="project-img">
+                        <img src="img/consolacion_pro.png" alt="Consolación" class="project-img">
                         <div class="project-overlay">
                             <h3 class="project-title">Consolación</h3>
                         </div>
                     </div>
-                    <button class="project-btn">Ver Más</button>
+                    <a href="https://astounding-bubblegum-33f40f.netlify.app/" target="_blank">
+                    <button class="project-btn"  data-i18n="project-btn">Ver Más</button>
+                    </a>
                 </div>
 
                 <!-- Project Card 4 -->
                 <div class="project-card" data-project="4">
                     <div class="project-image-wrapper">
-                        <img src="img/proyecto-festival.jpg" alt="Festival de Música" class="project-img">
+                        <img src="img/festival_pro.png" alt="Festival de Música" class="project-img">
                         <div class="project-overlay">
                             <h3 class="project-title">Festival de Música</h3>
                         </div>
                     </div>
-                    <button class="project-btn">Ver Más</button>
+                    <a href="#">
+                    <button class="project-btn"  data-i18n="project-btn">Ver Más</button>
+                    </a>
                 </div>
 
                 <!-- Project Card 5 -->
                 <div class="project-card" data-project="5">
                     <div class="project-image-wrapper">
-                        <img src="img/proyecto-sql.jpg" alt="SQL" class="project-img">
+                        <img src="img/sql.png" alt="SQL" class="project-img">
                         <div class="project-overlay">
-                            <h3 class="project-title">SQL</h3>
+                            <h3 class="project-title">Optimizar los ingresos del comercio deportivo online</h3>
                         </div>
                     </div>
-                    <button class="project-btn">Ver Más</button>
+                      <a href="#">
+                    <button class="project-btn"  data-i18n="project-btn">Ver Más</button>
+                    </a>
                 </div>
 
                 <!-- Project Card 6 -->
                 <div class="project-card" data-project="6">
                     <div class="project-image-wrapper">
-                        <img src="img/proyecto-llm.jpg" alt="LLM" class="project-img">
+                        <img src="img/model_predictive.jpg" alt="LLM" class="project-img">
                         <div class="project-overlay">
                             <h3 class="project-title">LLM</h3>
                         </div>
                     </div>
-                    <button class="project-btn">Ver Más</button>
+                    <a href="#">
+                    <button class="project-btn"  data-i18n="project-btn">Ver Más</button>
+                    </a>
                 </div>
             </div>
         </div>
@@ -806,7 +818,7 @@
                         <img src="img/logo.png" alt="Alex Villada Logo">
                         <h3>Alex Villada</h3>
                     </div>
-                    <p class="footer-description">
+                    <p class="footer-description" data-i18n="footer-description">
                         Ingeniero Informático apasionado por aprender y crear soluciones 
                         relacionadas a la Analítica, Desarrollo e IA
                     </p>
@@ -814,20 +826,20 @@
 
                 <!-- Footer Column 2 - Quick Links -->
                 <div class="footer-column">
-                    <h4 class="footer-title">ENLACES RÁPIDOS</h4>
+                    <h4 class="footer-title" data-i18n="footer-links-title">ENLACES RÁPIDOS</h4>
                     <div class="footer-underline"></div>
                     <ul class="footer-links">
-                        <li><a href="#home">Inicio</a></li>
-                        <li><a href="#servicios">Nuestros Servicios</a></li>
-                        <li><a href="#acerca">Acerca de mí</a></li>
-                        <li><a href="#curriculum">Currículum</a></li>
-                        <li><a href="#portafolio">Portafolio</a></li>
+                        <li><a href="#home" data-i18n="footer-link-home">Inicio</a></li>
+                        <li><a href="#servicios" data-i18n="footer-link-services">Nuestros Servicios</a></li>
+                        <li><a href="#acerca" data-i18n="footer-link-about">Acerca de mí</a></li>
+                        <li><a href="#curriculum" data-i18n="footer-link-curriculum">Currículum</a></li>
+                        <li><a href="#portafolio" data-i18n="footer-link-portfolio">Portafolio</a></li>
                     </ul>
                 </div>
 
                 <!-- Footer Column 3 - Contact -->
                 <div class="footer-column">
-                    <h4 class="footer-title">Contáctame</h4>
+                    <h4 class="footer-title" data-i18n="footer-contact-title">Contáctame</h4>
                     <div class="footer-underline"></div>
                     <div class="footer-contact">
                         <div class="contact-item">
@@ -836,7 +848,7 @@
                                 <circle cx="12" cy="10" r="3"></circle>
                             </svg>
                             <div>
-                                <strong>Ubicación:</strong>
+                                <strong data-i18n="footer-location-label">Ubicación:</strong>
                                 <span>Medellín, Colombia</span>
                             </div>
                         </div>
@@ -846,7 +858,7 @@
                                 <polyline points="22,6 12,13 2,6"></polyline>
                             </svg>
                             <div>
-                                <strong>Email:</strong>
+                                <strong data-i18n="footer-email-label">Email:</strong>
                                 <a href="mailto:avilladaberrio@gmail.com">avilladaberrio@gmail.com</a>
                             </div>
                         </div>
@@ -856,23 +868,23 @@
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
                             </svg>
-                            Contáctanos por WhatsApp
+                            <p data-i18n="footer-whatsapp">Contáctanos por WhatsApp</p>
                         </a>
                     </div>
 
                     <!-- Social Media Icons -->
                     <div class="footer-social">
-                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="social-icon">
+                        <a href="https://www.facebook.com/alexandervilladab" target="_blank" aria-label="Facebook" class="social-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
                             </svg>
                         </a>
-                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-icon">
+                        <a href="https://www.instagram.com/alexv_.peace/" target="_blank" aria-label="Instagram" class="social-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0C8.74 0 8.333.015 7.053.072 5.775.132 4.905.333 4.14.63c-.789.306-1.459.717-2.126 1.384S.935 3.35.63 4.14C.333 4.905.131 5.775.072 7.053.012 8.333 0 8.74 0 12s.015 3.667.072 4.947c.06 1.277.261 2.148.558 2.913.306.788.717 1.459 1.384 2.126.667.666 1.336 1.079 2.126 1.384.766.296 1.636.499 2.913.558C8.333 23.988 8.74 24 12 24s3.667-.015 4.947-.072c1.277-.06 2.148-.262 2.913-.558.788-.306 1.459-.718 2.126-1.384.666-.667 1.079-1.335 1.384-2.126.296-.765.499-1.636.558-2.913.06-1.28.072-1.687.072-4.947s-.015-3.667-.072-4.947c-.06-1.277-.262-2.149-.558-2.913-.306-.789-.718-1.459-1.384-2.126C21.319 1.347 20.651.935 19.86.63c-.765-.297-1.636-.499-2.913-.558C15.667.012 15.26 0 12 0zm0 2.16c3.203 0 3.585.016 4.85.071 1.17.055 1.805.249 2.227.415.562.217.96.477 1.382.896.419.42.679.819.896 1.381.164.422.36 1.057.413 2.227.057 1.266.07 1.646.07 4.85s-.015 3.585-.074 4.85c-.061 1.17-.256 1.805-.421 2.227-.224.562-.479.96-.899 1.382-.419.419-.824.679-1.38.896-.42.164-1.065.36-2.235.413-1.274.057-1.649.07-4.859.07-3.211 0-3.586-.015-4.859-.074-1.171-.061-1.816-.256-2.236-.421-.569-.224-.96-.479-1.379-.899-.421-.419-.69-.824-.9-1.38-.165-.42-.359-1.065-.42-2.235-.045-1.26-.061-1.649-.061-4.844 0-3.196.016-3.586.061-4.861.061-1.17.255-1.814.42-2.234.21-.57.479-.96.9-1.381.419-.419.81-.689 1.379-.898.42-.166 1.051-.361 2.221-.421 1.275-.045 1.65-.06 4.859-.06l.045.03zm0 3.678c-3.405 0-6.162 2.76-6.162 6.162 0 3.405 2.76 6.162 6.162 6.162 3.405 0 6.162-2.76 6.162-6.162 0-3.405-2.76-6.162-6.162-6.162zM12 16c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4zm7.846-10.405c0 .795-.646 1.44-1.44 1.44-.795 0-1.44-.646-1.44-1.44 0-.794.646-1.439 1.44-1.439.793-.001 1.44.645 1.44 1.439z"/>
                             </svg>
                         </a>
-                        <a href="https://github.com" target="_blank" aria-label="GitHub" class="social-icon">
+                        <a href="https://github.com/Ale-pool" target="_blank" aria-label="GitHub" class="social-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                             </svg>
@@ -883,8 +895,8 @@
 
             <!-- Footer Bottom -->
             <div class="footer-bottom">
-                <p>&copy; 2025 Alex Villada. Todos los derechos reservados.</p>
-                <p>Diseñado y desarrollado con <span class="heart">❤</span> por Alex Villada</p>
+                <p data-i18n="footer-copyright">&copy; 2025 Alex Villada. Todos los derechos reservados.</p>
+                <p data-i18n="footer-made">Diseñado y desarrollado por Alexander  Villada</p>
             </div>
         </div>
     </footer>
