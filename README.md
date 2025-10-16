@@ -3,13 +3,10 @@
 <div align="center">
 
 ![Portfolio Banner](https://img.shields.io/badge/Portfolio-Alexander_Villada-FF5733?style=for-the-badge)
-![Version](https://img.shields.io/badge/version-1.0.0-00FF88?style=for-the-badge)
 ![Status](https://img.shields.io/badge/status-Active-00FF88?style=for-the-badge)
-![License](https://img.shields.io/badge/license-MIT-blue?style=for-the-badge)
 
 **Portafolio web profesional y moderno para mostrar proyectos, habilidades y experiencia**
 
-[Demo en Vivo](#) • [Reportar Bug](https://github.com/yourusername/portfolio/issues) • [Solicitar Feature](https://github.com/yourusername/portfolio/issues)
 
 </div>
 
