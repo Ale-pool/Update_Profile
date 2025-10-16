@@ -83,9 +83,8 @@ perfil/
 │   └── ...
 ├── docs/
 │   ├── README.md                   # Este archivo
-│   ├── README_TRADUCCION.md        # Guía del sistema de traducción
-│   ├── TRADUCCION_GUIA.md          # Checklist de traducción
-│   └── COMO_CAMBIAR_ESTADO.md      # Guía del indicador de estado
+│   
+│    
 ├── add_i18n.py                     # Script para automatizar data-i18n
 └── .gitignore                      # Archivos ignorados por Git
 ```
